@@ -1,0 +1,17 @@
+{application, my_app,
+                [{description, "An OTP application"},
+                 {vsn, "0.1.0"},
+                 {registered, []},
+                 {mod, {my_app_app, []}},
+                 {applications, [
+                     kernel,
+                     stdlib,
+                     cowboy,  % Ensure Cowboy is here
+                     ranch    % Ensure Ranch is also here
+                 ]},
+                 {env, []},
+                 {modules, []},
+                 {licenses, ["Apache 2.0"]},
+                 {links, []}
+                ]}.
+
