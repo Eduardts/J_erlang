@@ -1,0 +1,28 @@
+To deploy the system:
+
+Start Erlang nodes:
+
+Copy
+erl -name node1@localhost -setcookie secret
+erl -name node2@localhost -setcookie secret
+Initialize the application:
+erlang
+
+Copy
+application:start(device_management).
+
+Example usage:
+
+
+Copy
+% Register a new device
+device_manager:register_device("device_123").
+
+% Update device status
+device_manager:update_status("device_123", active).
+
+% Verify permissions
+iam_server:verify_permission("device_123", "read_sensor_data").
+
+% Analyze access logs
+access_log_analyzer:analyze_logs(LastHourLogs).
